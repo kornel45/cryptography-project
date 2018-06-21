@@ -15,10 +15,7 @@ CLIENT_CERT = os.path.join(local, 'client_data/client1/client.pem')
 
 clients = {}
 
-try:
-    s.bind((ip, port))
-except:
-    s.bind((ip, port+1))
+s.bind((ip, port))
 s.listen()
 
 
